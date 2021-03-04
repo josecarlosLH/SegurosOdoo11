@@ -5,7 +5,7 @@
         model="seguros.poliza"
         string="Poliza"
         report_type="qweb-pdf"
-        name="seguros.report_poliza_template"
+        name="seguros.report_seguros_template"
     />
 
     <template id="report_seguros_template">
@@ -41,13 +41,13 @@
                     <t t-foreach="docs[0]['servicio']" t-as="serv">
                         <tr>
                             <td>
-                                <span t-esc="prod['idservicio']"/>
+                                <span t-esc="serv['idservicio']"/>
                             </td>
                             <td class="text-center">
-                                <span t-esc="prod['descripcion']"/>
+                                <span t-esc="serv['descripcion']"/>
                             </td>
                             <td class="text-center">
-                                <span t-esc="prod['precio']"/>
+                                <span t-esc="serv['precio']"/>
                             </td>
                         </tr>
                     </t>
